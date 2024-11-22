@@ -28,7 +28,8 @@ import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score,confusion_matrix
+from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
+
 
 iris=load_iris()
 
@@ -53,6 +54,9 @@ print(f"Accuracy: {accuracy:.3f}")
 cm=confusion_matrix(y_test, y_pred)
 print("confusion Matrix:")
 print(cm)
+
+report = classification_report(y_test, y_pred, target_names=iris.target_names)
+print("\nClassification Report:\n", report)
 */
 ```
 
@@ -63,6 +67,8 @@ print(cm)
 ![Screenshot 2024-09-24 172408](https://github.com/user-attachments/assets/35b69c63-c7e4-4cfa-9464-650470e200b5)
 
 ![Screenshot 2024-09-24 172415](https://github.com/user-attachments/assets/8bb140d0-28a7-429d-907d-f2a0708566c0)
+
+![image](https://github.com/user-attachments/assets/37aa64b6-21fe-4ee4-8896-10ace5452ff9)
 
 
 ## Result:
